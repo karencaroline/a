@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doces Interativos</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fff0f6;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+      color: #8c3a50;
+    }
+
+    h1 {
+      color: #c15065;
+    }
+
+    label, p, select, option {
+      color: #8c3a50;
+    }
+
+    .game, .personalizar, .recomendacoes {
+      background: #fce4ec;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 600px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    button {
+      padding: 10px 20px;
+      background: #c15065;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 10px;
+      font-size: 16px;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #a13c4e;
+    }
+
+    select {
+      padding: 10px;
+      border-radius: 6px;
+      margin: 5px;
+    }
+
+    .resultado, .sugestao {
+      font-weight: bold;
+      margin-top: 15px;
+      color: #d41486;
+    }
+
+    .voltar {
+      margin-top: 30px;
+      display: inline-block;
+      text-decoration: none;
+      background: #e1b4c5;
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎮 Joguinho: Clique no doce certo</h1>
+  <div class="game">
+    <p>Encontre o cupcake verdadeiro:</p>
+    <button onclick="verificarDoce('🍭')">🍭</button>
+    <button onclick="verificarDoce('🍫')">🍫</button>
+    <button onclick="verificarDoce('🧁')">🧁</button>
+    <p class="resultado" id="resultado-jogo"></p>
+  </div>
+
+  <h1>🧁 Monte seu doce personalizado</h1>
+  <div class="personalizar">
+    <label>Recheio:</label>
+    <select id="recheio">
+      <option>Chocolate</option>
+      <option>Doce de leite</option>
+      <option>Nutella</option>
+    </select>
+    <label>Cobertura:</label>
+    <select id="cobertura">
+      <option>Morango</option>
+      <option>Marshmallow</option>
+      <option>Glacê rosa</option>
+    </select>
+    <label>Topper:</label>
+    <select id="topper">
+      <option>Granulado</option>
+      <option>Confete</option>
+      <option>Cereja</option>
+    </select>
+    <br><br>
+    <button onclick="montarDoce()">Montar Doce 🍬</button>
+    <p class="resultado" id="resultado-montagem"></p>
+  </div>
+
+  <h1>🎯 Recomendação de Doces</h1>
+  <div class="recomendacoes">
+    <label>Você gostou de:</label>
+    <select id="gosto">
+      <option>Brigadeiro</option>
+      <option>Cupcake</option>
+      <option>Donuts</option>
+    </select>
+    <button onclick="recomendarDoce()">Ver recomendação</button>
+    <p class="sugestao" id="recomendacao"></p>
+  </div>
+  <h1>🍭 Quiz: Qual doce combina com você?</h1>
+  <div class="quiz">
+    <p>Escolha o que você prefere:</p>
+    <select id="preferencia">
+      <option value="chocolate">Chocolate</option>
+      <option value="frutas">Frutas</option>
+      <option value="cremoso">Cremoso</option>
+    </select>
+    <br><br>
+    <button onclick="verResultadoQuiz()">Ver Resultado</button>
+    <p class="resultado" id="resultado-quiz"></p>
+  </div>
+
+  <h1>👩‍🍳 Seja confeiteira por um dia</h1>
+  <div class="simulador">
+    <p>Crie um novo doce para o cardápio:</p>
+    <input type="text" id="nomeDoce" placeholder="Nome do doce" />
+    <select id="tipoDoce">
+      <option value="bolo">Bolo</option>
+      <option value="brigadeiro">Brigadeiro</option>
+      <option value="cupcake">Cupcake</option>
+    </select>
+    <br><br>
+    <button onclick="criarDoce()">Enviar Criação</button>
+    <p class="resultado" id="resultado-doce"></p>
+  </div>
+
+  <h1>💳 Simule o parcelamento</h1>
+  <div class="parcelamento">
+    <p>Digite o valor total:</p>
+    <input type="number" id="valorTotal" placeholder="R$" />
+    <select id="parcelas">
+      <option value="1">1x sem juros</option>
+      <option value="2">2x</option>
+      <option value="3">3x</option>
+      <option value="4">4x</option>
+    </select>
+    <br><br>
+    <button onclick="calcularParcelas()">Calcular</button>
+    <p class="resultado" id="resultado-parcela"></p>
+  </div>
+
+ 
+
+  <a class="voltar" href="inicio.html">⬅ Voltar para a Página Inicial</a>
+  <script src="script 2.js"></script>

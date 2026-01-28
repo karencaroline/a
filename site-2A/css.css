@@ -1,0 +1,102 @@
+/* PALETA ROSA BEBÊ 2025 */
+:root {
+    --bg: #FEDCE2;
+    --header: #FBC5D0;
+    --btn: #FF9BB5;
+    --btn-hover: #E8849F;
+    --titulo: #CE7489;
+    --texto: #6B4F4F;
+    --escuro: #8C4355;
+  }
+  
+  * { margin:0; padding:0; box-sizing:border-box; }
+  
+  body {
+    font-family: 'Quicksand', sans-serif;
+    background: var(--bg);
+    color: var(--texto);
+    line-height: 1.7;
+  }
+  
+  /* Header fixo */
+  header {
+    background: var(--header);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  }
+  
+  header h1 {
+    font-size: 2rem;
+    color: var(--titulo);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .mascote-header { width: 45px; height: 45px; border-radius: 50%; border: 3px solid var(--titulo); object-fit: cover; }
+  
+  nav ul { list-style: none; display: flex; gap: 25px; flex-wrap: wrap; }
+  nav a { color: var(--titulo); text-decoration: none; font-weight: 600; transition: 0.3s; }
+  nav a:hover { color: var(--escuro); }
+  
+  /* Main (espaço pro header fixo) */
+  main { margin-top: 100px; padding: 20px; }
+  
+  /* Botão padrão */
+  .btn, .btn-comprar {
+    display: inline-block;
+    background: var(--btn);
+    color: white;
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+  .btn:hover, .btn-comprar:hover { background: var(--btn-hover); }
+  
+  /* Cards */
+  .card, .card-depo {
+    background: white;
+    border-radius: 18px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+    border: 3px solid var(--header);
+    transition: 0.3s;
+  }
+  .card:hover, .card-depo:hover { transform: translateY(-6px); box-shadow: 0 12px 20px rgba(0,0,0,0.15); }
+  
+  footer {
+    background: var(--header);
+    text-align: center;
+    padding: 30px;
+    color: var(--escuro);
+    margin-top: 60px;
+  }
+  
+  /* WhatsApp flutuante */
+  .whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: #25d366;
+    color: white;
+    border-radius: 50%;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    z-index: 999;
+  }

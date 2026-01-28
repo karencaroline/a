@@ -1,0 +1,136 @@
+/* ❀ Fundo geral da paleta do mascote */
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  background-color: #FEDCE2; 
+  color: #6B4F4F;
+}
+
+/* ❀ Header */
+header {
+  background-color: #FBC5D0; 
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #CE7489;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* mascote mini no header */
+.mascote-header {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #CE7489;
+  background: white;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #B45D72;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #8C4355;
+}
+
+/* ❀ Título */
+.produtos {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.produtos h3 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #CE7489;
+}
+
+/* ❀ Cards */
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.card {
+  background-color: #FFFFFF;
+  border-radius: 18px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+  padding: 20px;
+  width: 230px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 3px solid #FBC5D0;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 14px;
+}
+
+.card h4 {
+  margin-top: 12px;
+  font-size: 1.2rem;
+  color: #6B4F4F;
+}
+
+.btn-comprar {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 20px;
+  background-color: #FF9BB5;
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-comprar:hover {
+  background-color: #E8849F;
+}
+
+/* ❀ Footer */
+footer {
+  background-color: #FBC5D0;
+  text-align: center;
+  padding: 20px;
+  color: #8C4355;
+  font-size: 0.9rem;
+  margin-top: 40px;
+  box-shadow: 0 -4px 10px rgba(0,0,0,0.05);
+}
+
+/* Mascote decorativo no fundo */
+.mascote-bg {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 140px;
+  opacity: 0.25;
+  pointer-events: none;
+}
